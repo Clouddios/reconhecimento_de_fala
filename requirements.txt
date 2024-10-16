@@ -1,0 +1,5 @@
+Flask==x.x.x
+SpeechRecognition==x.x.x
+pydub==x.x.x
+python-docx==x.x.x
+fpdf==x.x.x
