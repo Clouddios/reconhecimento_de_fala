@@ -30,59 +30,59 @@ Para instalar o FFmpeg, siga as instruções de instalação para seu sistema op
   ```bash
   brew install ffmpeg
 
-    Linux: Utilize o gerenciador de pacotes da sua distribuição. Por exemplo, no Ubuntu:
-
-    sudo apt update
-    sudo apt install ffmpeg
+- **Linux**: Utilize o gerenciador de pacotes da sua distribuição. Por exemplo, no Ubuntu:
+  ```bash
+  sudo apt update
+  sudo apt install ffmpeg
 
 Instalação do Projeto
 
-    Clone o repositório:
+  Clone o repositório:
+  
+    git clone https://github.com/Clouddios/reconhecimento_de_fala.git
+    cd reconhecimento_de_fala
 
-    git clone https://github.com/seu_usuario/seu_repositorio.git
-    cd seu_repositorio
+Crie um ambiente virtual (opcional, mas recomendado):
 
-    Crie um ambiente virtual (opcional, mas recomendado):
+  No Windows:
 
-        No Windows:
+    python -m venv venv
+    venv\Scripts\activate
 
-        python -m venv venv
-        venv\Scripts\activate
+  No Linux/Mac:
 
-        No Linux/Mac:
+    python -m venv venv
+    source venv/bin/activate
 
-        python -m venv venv
-        source venv/bin/activate
-
-    Instale as dependências:
+  Instale as dependências:
 
     pip install -r requirements.txt
 
 Configuração do Ambiente
 
-    Verifique a instalação do FFmpeg: Após instalar o FFmpeg, execute o seguinte comando no terminal para verificar a instalação:
+  Verifique a instalação do FFmpeg: Após instalar o FFmpeg, execute o seguinte comando no terminal para verificar a instalação:
 
     ffmpeg -version
 
-    Crie o arquivo .env (se necessário): Se o projeto usa variáveis de ambiente, crie um arquivo .env na raiz do projeto e adicione suas variáveis.
+  Crie o arquivo .env (se necessário): Se o projeto usa variáveis de ambiente, crie um arquivo .env na raiz do projeto e adicione suas variáveis.
 
 Execução do Projeto
 
-    Inicie o servidor Flask:
+  Inicie o servidor Flask:
 
     flask run
 
-    Acesse a aplicação no seu navegador:
-        Abra o navegador e vá para: http://127.0.0.1:5000
+Acesse a aplicação no seu navegador:
+    Abra o navegador e vá para: http://127.0.0.1:5000
 
-    Utilize a aplicação:
+  Utilize a aplicação:
         Faça o upload do seu arquivo de áudio e aguarde a transcrição.
 
 Testes
 
 Para garantir que a aplicação esteja funcionando corretamente, você pode executar testes unitários, se disponíveis. Execute:
 
-pytest
+    pytest
 
 Contribuição
 
@@ -90,6 +90,3 @@ Contribuições são bem-vindas! Sinta-se à vontade para abrir um issue ou envi
 Licença
 
 Este projeto está licenciado sob a MIT License.
-
-
-Não esqueça de substituir `seu_usuario` e `seu_repositorio` 
