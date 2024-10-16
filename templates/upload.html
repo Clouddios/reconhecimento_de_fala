@@ -1,17 +1,37 @@
-<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
     <title>Sistema de Transcrição Automática</title>
 </head>
 <body>
-    <h1>Transcrição Automática de Áudio</h1>
-    <form action="/" method="POST" enctype="multipart/form-data">
-        <label for="file">Selecione um arquivo de áudio:</label>
-        <input type="file" name="file" id="file" accept="audio/*" required>
-        <br><br>
-        <button type="submit">Fazer Upload e Transcrever</button>
-    </form>
+    <header>
+        <h1>Transcrição Automática de Áudio</h1>
+    </header>
+    <div class="container">
+        <div class="upload-section">
+            <form action="/" method="POST" enctype="multipart/form-data">
+                <label for="file">Selecione um arquivo de áudio:</label>
+                <input type="file" name="file" id="file" accept="audio/*" required>
+                <br><br>
+                <button type="submit" class="button">Fazer Upload e Transcrever</button>
+            </form>
+        </div>
+    </div>
+    <footer>
+        <p>&copy; 2024 Sistema de Transcrição Automática</p>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script>
+    $(document).ready(function(){
+        $("form").submit(function(){
+            alert("Arquivo enviado com sucesso!");
+        });
+    });
+</script>
 </body>
 </html>

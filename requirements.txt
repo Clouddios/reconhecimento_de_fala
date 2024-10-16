@@ -1,5 +1,5 @@
-Flask==x.x.x
-SpeechRecognition==x.x.x
-pydub==x.x.x
-python-docx==x.x.x
-fpdf==x.x.x
+Flask==2.2.2
+Pydub==0.25.1
+SpeechRecognition==3.8.1
+python-docx==0.8.11  # Versão mais recente até agora
+fpdf==1.7.2           # Versão mais recente até agora
