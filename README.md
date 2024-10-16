@@ -1,72 +1,33 @@
-1. Instalar Dependências
-Antes de tudo, você precisa garantir que o novo computador tenha o Python e as bibliotecas necessárias instaladas. Para isso, siga os passos abaixo:
+# Sistema de Reconhecimento de Voz para Transcrição Automática
 
-a. Instalar Python
-Certifique-se de que o Python (preferencialmente a mesma versão que você está usando) está instalado. Você pode baixar e instalar o Python a partir do site oficial.
+Este projeto é um sistema de reconhecimento de voz que permite a transcrição automática de arquivos de áudio. O sistema possui funcionalidades como upload de arquivos de áudio, transcrição automática e exportação para formatos como PDF ou DOCX.
 
-b. Instalar as Dependências do Projeto
-Clone o Repositório
+## Funcionalidades
 
-Se o seu projeto estiver em um repositório Git, clone o repositório no novo computador:
+- **Upload de Arquivos de Áudio**: O usuário pode fazer o upload de arquivos de áudio para transcrição.
+- **Transcrição Automática**: O sistema realiza a transcrição do áudio enviado.
+- **Exportação**: As transcrições podem ser exportadas para formatos PDF ou DOCX.
 
-bash
-Copiar código
-git clone https://github.com/SEU_USUARIO/NOME_DO_REPOSITORIO.git
-Navegue para o Diretório do Projeto
+## Tecnologias Utilizadas
 
-bash
-Copiar código
-cd NOME_DO_REPOSITORIO
-Criar um Ambiente Virtual
+- [Flask](https://flask.palletsprojects.com/) - Um micro framework para Python utilizado para criar a aplicação web.
+- [Pydub](https://pydub.com/) - Biblioteca para manipulação de áudio.
+- [SpeechRecognition](https://pypi.org/project/SpeechRecognition/) - Biblioteca para reconhecimento de fala.
+- [python-docx](https://python-docx.readthedocs.io/en/latest/) - Biblioteca para criar e modificar arquivos DOCX.
+- [fpdf](http://www.fpdf.org/) - Biblioteca para criar documentos PDF.
 
-É uma boa prática usar um ambiente virtual para instalar as dependências do seu projeto. Para criar um ambiente virtual, execute:
+## Pré-requisitos
 
-bash
-Copiar código
-python -m venv .venv
-Ativar o Ambiente Virtual
+Antes de executar o projeto, certifique-se de ter os seguintes pré-requisitos:
 
-No Windows:
+- Python 3.6 ou superior
+- Instalação do FFmpeg para manipulação de arquivos de áudio.
 
-bash
-Copiar código
-.venv\Scripts\activate
-No Linux ou macOS:
+### Instalação do FFmpeg
 
-bash
-Copiar código
-source .venv/bin/activate
-Instalar Dependências
+Para instalar o FFmpeg, siga as instruções de instalação para seu sistema operacional:
 
-Se você tiver um arquivo requirements.txt, instale as dependências necessárias:
-
-bash
-Copiar código
-pip install -r requirements.txt
-2. Instalar o FFmpeg
-Se o seu projeto usa o ffmpeg, você precisará instalá-lo no novo computador. Dependendo do sistema operacional, você pode fazer o seguinte:
-
-Windows: Baixe o FFmpeg do site oficial, extraia os arquivos e adicione o diretório bin do FFmpeg ao seu PATH.
-
-Linux (Debian/Ubuntu):
-
-bash
-Copiar código
-sudo apt update
-sudo apt install ffmpeg
-macOS: Se você estiver usando o Homebrew, você pode instalar com:
-
-bash
-Copiar código
-brew install ffmpeg
-3. Rodar o Projeto
-Com as dependências instaladas e o ambiente virtual ativado, você pode rodar seu projeto. Se você tem um arquivo app.py ou algo semelhante, execute:
-
-bash
-Copiar código
-python app.py
-4. Testar o Projeto
-Acesse o aplicativo pelo navegador, geralmente na URL http://127.0.0.1:5000 ou a porta que você configurou.
-
-5. Verificar Configurações Específicas
-Se o seu projeto depende de configurações específicas (como variáveis de ambiente), certifique-se de configurar essas também no novo computador.
+- **Windows**: [Instruções de instalação do FFmpeg para Windows](https://ffmpeg.org/download.html#build-windows).
+- **Mac**: Instale usando Homebrew:
+  ```bash
+  brew install ffmpeg
